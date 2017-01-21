@@ -40,5 +40,5 @@ def generate_fibonacci_series(count):
 if __name__ == "__main__":
     print "Welcome to FizzBuzz."
 
-    fizzbuzz()
+    fibonacci_fizzbuzz()
 
