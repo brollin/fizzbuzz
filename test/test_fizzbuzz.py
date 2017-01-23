@@ -19,6 +19,7 @@ class FizzBuzzTestSuite(unittest.TestCase):
 
     def setUp(self):
         self.fibonacci_gen = fizzbuzz.generate_fibonacci_series()
+        self.primes_gen = fizzbuzz.generate_prime_number(30)
 
     def test_convert_to_number(self):
         assert(fizzbuzz.convert_to_number('') is False)
@@ -27,6 +28,22 @@ class FizzBuzzTestSuite(unittest.TestCase):
         assert(fizzbuzz.convert_to_number(-10) == -10)
         assert(fizzbuzz.convert_to_number(1.0) == 1)
         assert(fizzbuzz.convert_to_number(1.5) == 1)
+
+    def test_generate_prime_number_initial(self):
+        assert(self.primes_gen.next() == 2)
+        assert(self.primes_gen.next() == 3)
+
+    def test_generate_prime_number_first10(self):
+        assert(self.primes_gen.next() == 2)
+        assert(self.primes_gen.next() == 3)
+        assert(self.primes_gen.next() == 5)
+        assert(self.primes_gen.next() == 7)
+        assert(self.primes_gen.next() == 11)
+        assert(self.primes_gen.next() == 13)
+        assert(self.primes_gen.next() == 17)
+        assert(self.primes_gen.next() == 19)
+        assert(self.primes_gen.next() == 23)
+        assert(self.primes_gen.next() == 29)
 
     def test_generate_fibonacci_series_initial(self):
         assert(self.fibonacci_gen.next() == 0)
