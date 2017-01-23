@@ -15,3 +15,9 @@ nosetests.xml
 coverage.xml
 *,cover
 .hypothesis/
+
+# sphinx documentation
+docs/_build/
+
+# MacOS stuff
+.DS_STORE
