@@ -21,3 +21,6 @@ docs/_build/
 
 # MacOS stuff
 .DS_STORE
+
+# Python
+*.pyc
