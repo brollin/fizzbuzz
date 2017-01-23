@@ -14,6 +14,17 @@
 
 """
 
+def convert_to_number(string):
+    """
+    Tries to cast input into an integer number, returning the
+    number if successful and returning False otherwise.
+    """
+    try:
+        number = int(string)
+        return number
+    except:
+        return False
+
 
 def fibonacci_fizzbuzz(output=100):
     """
@@ -26,6 +37,7 @@ def fibonacci_fizzbuzz(output=100):
 
     output -- number of lines of output (default 100)
     """
+
     pass
 
 
@@ -47,17 +59,20 @@ def generate_fibonacci_series():
         yield y
 
 
-def dynamic_fibonacci(fib_series, memo):
-    """
-    Generate the next number in the Fibonacci series.
-
-    fib_series -- list of Fibonacci series so far
-    memo -- memoization of previous Fib
-    """
-    pass
-
-
 if __name__ == "__main__":
-    print "Welcome to FizzBuzz."
+    """
+    Welcome user and ask for a number of output lines. Run
+    fibonacci_fizzbuzz with this amount of output lines.
+    """
+    welcome_text = 'Welcome to Fibonacci FizzBuzz!'
+    input_text = 'How many lines of output? Enter a positive number:'
+    invalid_input = 'Error - input was not a positive number.\n'
 
-    fibonacci_fizzbuzz()
+    # Attempt to obtain a valid number of output lines from the user
+    output_count = convert_to_number(input(input_text))
+    while not output_count or output_count < 0:
+        output_count = convert_to_number(input(invalid_input + input_text))
+
+    print 'Running Fibonacci FizzBuzz with', output_count, 'lines of output...'
+
+    fibonacci_fizzbuzz(output_count)
