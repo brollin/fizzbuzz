@@ -65,7 +65,7 @@ def generate_fibonacci_series():
         yield y
 
 
-def fibonacci_fizzbuzz(output_count=100):
+def fibonacci_fizzbuzz(output_count=20):
     """
     Prints a Fibonacci series F(n), displaying:
         "Buzz" when F(n) is divisible by 3,
@@ -74,7 +74,7 @@ def fibonacci_fizzbuzz(output_count=100):
         "BuzzFizz" when F(n) is prime,
         the value F(n) otherwise.
 
-    output_count -- number of lines of output (default 100)
+    output_count -- number of lines of output (default 20)
     """
     # Find the n-th Fibonacci number with Binet's Formula
     golden = (5**0.5 + 1) / 2
