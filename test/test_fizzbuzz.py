@@ -31,6 +31,18 @@ class FizzBuzzTestSuite(unittest.TestCase):
     def test_generate_fibonacci_series_initial(self):
         assert(self.fibonacci_gen.next() == 0)
         assert(self.fibonacci_gen.next() == 1)
+    
+    def test_generate_fibonacci_series_first10(self):
+        assert(self.fibonacci_gen.next() == 0)
+        assert(self.fibonacci_gen.next() == 1)
+        assert(self.fibonacci_gen.next() == 1)
+        assert(self.fibonacci_gen.next() == 2)
+        assert(self.fibonacci_gen.next() == 3)
+        assert(self.fibonacci_gen.next() == 5)
+        assert(self.fibonacci_gen.next() == 8)
+        assert(self.fibonacci_gen.next() == 13)
+        assert(self.fibonacci_gen.next() == 21)
+        assert(self.fibonacci_gen.next() == 34)
 
     def test_fibonacci_fizzbuzz(self):
         pass
