@@ -11,6 +11,7 @@
 import unittest
 import fizzbuzz
 
+
 class FizzBuzzTestSuite(unittest.TestCase):
     """
     TODO
@@ -26,7 +27,7 @@ class FizzBuzzTestSuite(unittest.TestCase):
     def test_fibonacci_fizzbuzz(self):
         pass
 
+
 if __name__ == "__main__":
     import nose2
     nose2.main()
-

@@ -16,6 +16,3 @@
 __license__ = 'MIT'
 __version__ = '1.0'
 __author__ = 'Ben Rollin'
-
-from .fizzbuzz import fibonacci_fizzbuzz
-
