@@ -14,6 +14,7 @@
 
 """
 
+
 def convert_to_number(string):
     """
     Tries to cast input into an integer number, returning the
@@ -57,8 +58,9 @@ def fibonacci_fizzbuzz(output_count=100):
                 out += 'Fizz'
             if next_output % 3 == 0:
                 out += 'Buzz'
-            if not out: out = next_output
-            
+            if not out:
+                out = next_output
+
         print next_output
         output += 1
 
