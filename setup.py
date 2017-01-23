@@ -13,7 +13,7 @@ setup(  name='fizzbuzz',
     	description='Fizzbuzz applied to a Fibonacci series.',
 		long_description=readme,
 		author='Ben Rollin',
-		url='https://github.com/kennethreitz/samplemod',
+		url='https://github.com/brollin/fizzbuzz',
 		license=license,
-		packages=find_packages(exclude=('tests',))
+		packages=find_packages(exclude=('test',))
 )
