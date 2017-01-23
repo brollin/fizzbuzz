@@ -27,13 +27,32 @@ def fibonacci_fizzbuzz(output = 100):
 
     output -- number of lines of output (default 100)
     """
-    pass 
+    pass
 
-def generate_fibonacci_series(count):
+def generate_fibonacci_series():
     """
-    Generate a Fibonacci series and return as a list.
+    Generator function for a Fibonacci series.
+    """
 
-    count -- the count of Fibonacci numbers
+    # Initially yield a 0 and 1 to start the series
+    x = 0
+    yield x
+    y = 1
+    yield y
+
+    while True:
+        # Yield a number that is the sum of the previous
+        #   two numbers.
+        x, y = y, x + y
+        yield y
+
+
+def dynamic_fibonacci(fib_series, memo):
+    """
+    Generate the next number in the Fibonacci series.
+
+    fib_series -- list of Fibonacci series so far
+    memo -- memoization of previous Fib
     """
     pass
 
