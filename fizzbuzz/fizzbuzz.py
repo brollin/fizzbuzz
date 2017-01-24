@@ -139,6 +139,12 @@ if __name__ == "__main__":
     Welcomes user and asks for a number of output lines. Runs
     fibonacci_fizzbuzz with this amount of output lines.
     """
+
+    # Configure an argument parser
+    import argparse
+    parser = argparse.ArgumentParser(description='Apply Fizzbuzz to a Fibonacci series.')
+    args = parser.parse_args()
+
     welcome_text = 'Welcome to Fibonacci FizzBuzz!'
     input_text = 'How many lines of output? Enter a number between 1 and 40:\n'
     invalid_input = 'Error - input was not in the proper range.\n'
