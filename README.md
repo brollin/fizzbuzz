@@ -34,7 +34,8 @@ To generate the documenation:
 $ cd docs
 $ make html
 ```
+The documentation can be viewed at ```docs/_build/html/index.html```, relative the top-level repo directory.
 
 ## Constraints
 
-Depending on the memory of your system, it may not be possible to compute the full 40 lines of output, due to the way that the primes are computed.
+Depending on the memory of your system, it may not be possible to compute the full 40 lines of output.
