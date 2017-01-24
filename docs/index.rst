@@ -14,10 +14,12 @@ Welcome to fizzbuzz's documentation!
    :members:
 .. automodule:: fizzbuzz.fizzbuzz
    :members:
+   :undoc-members:
 .. automodule:: test
    :members:
 .. automodule:: test.test_fizzbuzz
    :members:
+   :undoc-members:
 
 Indices and tables
 ==================
