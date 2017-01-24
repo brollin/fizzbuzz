@@ -148,9 +148,9 @@ if __name__ == "__main__":
     print '-'*30
 
     # Attempt to obtain a valid number of output lines from the user
-    output_count = convert_to_number(input(input_text))
+    output_count = convert_to_number(raw_input(input_text))
     while not output_count or output_count < 1 or output_count > 40:
-        output_count = convert_to_number(input(invalid_input + input_text))
+        output_count = convert_to_number(raw_input(invalid_input + input_text))
 
     print 'Running Fibonacci FizzBuzz with', output_count, 'lines of output...'
     print '-'*30
@@ -160,4 +160,5 @@ if __name__ == "__main__":
     start = time.time()
     fibonacci_fizzbuzz(output_count)
     end = time.time() - start
+    print '-'*30
     print 'Runtime was %s seconds.' % end
