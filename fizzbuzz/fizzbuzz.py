@@ -32,7 +32,14 @@ def generate_prime_number(count=20):
     """
     Returns a generator function for prime numbers,
     utilizing the Sieve of Eratosthenes.
+
+    count -- number that primes are considered up to using
+                Erastosthenes Sieve. Generator performs slowly
+                after this number.
     """
+    if count <= 1:
+        yield 1
+        return
 
     # Initialize an array to track whether each digit is prime
     primes_tracker = [True] * count
@@ -47,6 +54,18 @@ def generate_prime_number(count=20):
             for index in xrange(number*number, count, number):
                 primes_tracker[index] = False
 
+    # Resort to slower prime checking algorithm
+    number = count
+    while True:
+        found = True
+        for divider in xrange(2, int(number**0.5)+1):
+            if number % divider == 0:
+                found = False
+        if found:
+            yield number
+
+        number += 1
+
 
 def generate_fibonacci_series():
     """
@@ -60,8 +79,7 @@ def generate_fibonacci_series():
     yield y
 
     while True:
-        # Yield a number that is the sum of the previous
-        #   two numbers.
+        # Yield a number that is the sum of the previous two numbers.
         x, y = y, x + y
         yield y
 
@@ -98,7 +116,8 @@ def fibonacci_fizzbuzz(output_count=20):
                 next_prime = primes_gen.next()
         if next_output == next_prime:
             next_output = 'BuzzFizz'
-            next_prime = primes_gen.next()
+            if output + 1 < output_count:
+                next_prime = primes_gen.next()
 
         else:
             # Depending on divisibility, modify

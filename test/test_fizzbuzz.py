@@ -43,6 +43,19 @@ class FizzBuzzTestSuite(unittest.TestCase):
         assert(self.primes_gen.next() == 23)
         assert(self.primes_gen.next() == 29)
 
+    def test_generate_prime_number_past_count(self):
+        assert(self.primes_gen.next() == 2)
+        assert(self.primes_gen.next() == 3)
+        assert(self.primes_gen.next() == 5)
+        assert(self.primes_gen.next() == 7)
+        assert(self.primes_gen.next() == 11)
+        assert(self.primes_gen.next() == 13)
+        assert(self.primes_gen.next() == 17)
+        assert(self.primes_gen.next() == 19)
+        assert(self.primes_gen.next() == 23)
+        assert(self.primes_gen.next() == 29)
+        assert(self.primes_gen.next() == 31)
+
     def test_generate_fibonacci_series_initial(self):
         assert(self.fibonacci_gen.next() == 0)
         assert(self.fibonacci_gen.next() == 1)
