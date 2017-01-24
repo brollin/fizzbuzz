@@ -142,7 +142,8 @@ if __name__ == "__main__":
 
     # Configure an argument parser
     import argparse
-    parser = argparse.ArgumentParser(description='Apply Fizzbuzz to a Fibonacci series.')
+    parser = argparse.ArgumentParser(
+        description='Apply Fizzbuzz to a Fibonacci series.')
     args = parser.parse_args()
 
     welcome_text = 'Welcome to Fibonacci FizzBuzz!'
