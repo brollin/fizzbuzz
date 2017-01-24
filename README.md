@@ -29,6 +29,12 @@ To run the nose2 tests:
 $ make test
 ```
 
+To generate the documenation:
+```
+$ cd docs
+$ make html
+```
+
 ## Constraints
 
 Depending on the memory of your system, it may not be possible to do the full 40 lines of output, due to the way that the primes are computed.
