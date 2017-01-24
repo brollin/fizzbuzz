@@ -9,8 +9,10 @@
     package.
 """
 
+import sys
 import unittest
 import fizzbuzz
+from StringIO import StringIO
 
 
 class FizzBuzzTestSuite(unittest.TestCase):
@@ -73,7 +75,17 @@ class FizzBuzzTestSuite(unittest.TestCase):
         assert(self.fibonacci_gen.next() == 34)
 
     def test_fibonacci_fizzbuzz(self):
-        pass
+        # Save stdout for later reassignment
+        saved_stdout = sys.stdout
+        output = ''
+        try:
+            out = StringIO()
+            sys.stdout = out
+            fizzbuzz.fibonacci_fizzbuzz(5)
+            output = out.getvalue().strip().split('\n')
+            assert(output == ['0', '1', '1', 'BuzzFizz', 'BuzzFizz'])
+        finally:
+            sys.stdout = saved_stdout
 
 
 if __name__ == "__main__":
