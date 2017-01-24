@@ -1,5 +1,5 @@
 test:
-	nose2
+	nose2 --verbose
 
 init:
 	pip install -r requirements.txt
