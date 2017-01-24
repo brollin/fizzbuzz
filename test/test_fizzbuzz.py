@@ -13,9 +13,6 @@ import fizzbuzz
 
 
 class FizzBuzzTestSuite(unittest.TestCase):
-    """
-    TODO
-    """
 
     def setUp(self):
         self.fibonacci_gen = fizzbuzz.generate_fibonacci_series()
