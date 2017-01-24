@@ -17,8 +17,18 @@ To install, clone the GitHub repository and inside the top-level repository dire
 ```
 $ make init
 ```
+> Note: it may be necessary to ```sudo make init``` if permission errors occur.
+
 To run:
 ```
 $ python fizzbuzz/fizzbuzz.py
 ```
 
+To run the nose2 tests:
+```
+$ make test
+```
+
+## Constraints
+
+Depending on the memory of your system, it may not be possible to do the full 40 lines of output, due to the way that the primes are computed.
