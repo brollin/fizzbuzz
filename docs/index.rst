@@ -10,7 +10,14 @@ Welcome to fizzbuzz's documentation!
    :maxdepth: 2
    :caption: Contents:
 
-
+.. automodule:: fizzbuzz
+   :members:
+.. automodule:: fizzbuzz.fizzbuzz
+   :members:
+.. automodule:: test
+   :members:
+.. automodule:: test.test_fizzbuzz
+   :members:
 
 Indices and tables
 ==================

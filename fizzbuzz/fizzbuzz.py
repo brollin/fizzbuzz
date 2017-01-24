@@ -2,15 +2,16 @@
 # -*- coding: utf-8 -*-
 
 """
-    fizzbuzz.py
+fizzbuzz.py
+~~~~~~~~~~~
 
-    A module for generating the first n Fibonacci
-    numbers as F(n), displaying:
-      - "Buzz" when F(n) is divisible by 3,
-      - "Fizz" when F(n) is divisible by 5,
-      - "FizzBuzz" when F(n) is divisible by 15,
-      - "BuzzFizz" when F(n) is prime,
-      - the value F(n) otherwise.
+A module for generating the first n Fibonacci
+numbers as F(n), displaying:
+\n- "Buzz" when F(n) is divisible by 3,
+\n- "Fizz" when F(n) is divisible by 5,
+\n- "FizzBuzz" when F(n) is divisible by 15,
+\n- "BuzzFizz" when F(n) is prime,
+\n- the value F(n) otherwise.
 
 """
 
@@ -27,7 +28,7 @@ def convert_to_number(string):
         return False
 
 
-def generate_prime_number(count=100):
+def generate_prime_number(count=20):
     """
     Returns a generator function for prime numbers,
     utilizing the Sieve of Eratosthenes.
@@ -68,11 +69,11 @@ def generate_fibonacci_series():
 def fibonacci_fizzbuzz(output_count=20):
     """
     Prints a Fibonacci series F(n), displaying:
-        "Buzz" when F(n) is divisible by 3,
-        "Fizz" when F(n) is divisible by 5,
-        "FizzBuzz" when F(n) is divisible by 15,
-        "BuzzFizz" when F(n) is prime,
-        the value F(n) otherwise.
+      - "Buzz" when F(n) is divisible by 3,\n
+      - "Fizz" when F(n) is divisible by 5,\n
+      - "FizzBuzz" when F(n) is divisible by 15,\n
+      - "BuzzFizz" when F(n) is prime,\n
+      - the value F(n) otherwise.
 
     output_count -- number of lines of output (default 20)
     """
